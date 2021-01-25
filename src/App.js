@@ -1,34 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Profile from './components/Profile';
+// import Greeting from './components/Greeting/Greeting';
+// import HelloMessage from './components/HelloMessage';
+// import Calculator from './components/Calculator';
 
 function App() {
-  // const sum = (a, b) => a + b
-  function sum(a, b) {
-    return a + b;
-  }
+  // MyProfile
+  const user = {
+    name: 'Copter',
+    email: 'phanuwat@gmail.com',
+    city: 'Bangkok',
+    birthYear: 1996,
+  };
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <h3>Hello, World</h3>
-        <p>result: {sum(3, 6)}</p>
+    <React.Fragment>
+      <h1>My Profile</h1>
+      <Profile user={user} />
+      {/* <Greeting msg="สวัสดีครับ" name="คอปเตอร์" />
+      <Greeting msg="สวัสดีครับ" name="tido" />
+      <Greeting msg="สวัสดีครับ" name={1 + 3} />
+      <HelloMessage name="IronMan" />
 
-        <button onClick={() => alert('สวัสดีครับ')}>Click</button>
-
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Calculator a={20} b={9} /> */}
+    </React.Fragment>
   );
 }
 
